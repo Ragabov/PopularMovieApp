@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/movie_title_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="35dp"
+            android:background="#009688"
+            android:textSize="35sp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            >
+
+            <ImageView
+                android:id="@+id/movie_poster_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                android:padding="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/movie_year_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#424242"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
+                    android:id="@+id/movie_duration_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#424242"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:paddingBottom="4dp"
+                    />
+
+                <TextView
+                    android:id="@+id/movie_rating_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#424242"
+                    android:paddingBottom="4dp"
+                    />
+
+                <ImageButton
+                    android:id="@+id/favourite_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/star"
+                    android:background="@color/background_material_light"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/movie_overview_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:textColor="#424242"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#404040"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_trailers_label"
+            android:textSize="18sp"
+            android:textColor="#424242"
+            android:textStyle="bold"
+            android:padding="10dp"/>
+
+        <ListView
+            android:id="@+id/movie_trailers_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#404040"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/detail_reviews_label"
+            android:textSize="18sp"
+            android:padding="10dp"
+            android:textColor="#424242"
+            android:textStyle="bold"/>
+
+        <ListView
+            android:id="@+id/movie_reviews_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="ifContentScrolls"
+            />
+
+
+    </LinearLayout>
+</ScrollView>
